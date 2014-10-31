@@ -1,0 +1,1864 @@
+/**
+ * Theme Name:  Soliloquy
+ * Theme URI:   http://soliloquywp.com/
+ * Description: Custom WordPress theme for Soliloqy (v3).
+ * Author:      Thomas Griffin
+ * Author URI:  http://thomasgriffinmedia.com/
+ * Version:     1.0.0
+ * License:     GNU General Public License v2.0 (or later)
+ * License URI: http://www.opensource.org/licenses/gpl-license.php
+ */
+
+/* ==========================================================================
+   Base Styles and Defaults
+   ========================================================================== */
+
+html,
+body,
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: "europa", sans-serif;
+    color: #343434;
+}
+
+input,
+button {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+iframe,
+object {
+    width: 100%;
+}
+
+hr {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+body.fixed-header {
+    padding-top: 105px;
+}
+
+.panel-default.doc-toc {
+    margin: 0 0 30px 30px;
+}
+
+.blog .post {
+    margin-bottom: 90px;
+}
+
+#content .soliloquy-gallery-wrap {
+    margin: 60px 0;
+}
+
+.addon-level {
+    font-family: "europa", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 21px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.nocomments {
+    display: none;
+}
+
+.attachment-post-thumbnail {
+    display: block;
+    margin: 0 auto 30px;
+}
+
+.thumbnail .attachment-post-thumbnail {
+    margin: 0;
+}
+
+.addon-row .attachment-post-thumbnail {
+    margin-bottom: 0;
+}
+
+.addon-row {
+    margin-bottom: 30px;
+}
+
+.addon-desc-area {
+    padding: 15px;
+    border: 1px solid #eaeaea;
+    background: #f5f5f5;
+    border-top: 0 none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.addon-row h3 {
+    margin-bottom: 15px;
+}
+
+.addon-row p {
+    margin-bottom: 0 !important;
+}
+
+#soliloquy-video iframe {
+    width: 100%;
+    display: block;
+}
+
+p,
+.tab-pane li,
+.entry-content li {
+    font-family: "garamond-premier-pro", serif;
+    font-size: 21px;
+    margin: 0 0 30px;
+}
+
+.entry-content ul,
+.entry-content ol {
+    margin: 0 0 30px;
+}
+
+.pagination {
+	list-style: none;
+	margin-bottom: 40px;
+}
+
+.pagination ul {
+    padding: 0;
+}
+
+.pagination li {
+	float: left;
+	list-style: none;
+	margin: 0 5px 0 0;
+}
+
+.pagination li a {
+	background: #f4f4f4;
+	border: 1px solid #e4e4e4;
+	padding: 8px 15px 7px;
+}
+
+.pagination li a:hover,
+.pagination li.active a {
+	color: #b5121b;
+	background: #fff;
+	border: 1px solid #d4d4d4;
+}
+
+.thumbnails {
+    padding: 0;
+    list-style: none;
+}
+
+.addon-row li {
+    list-style: none;
+}
+
+.addon-row h3 {
+    margin-top: 6px;
+}
+
+.archive-sidebar .widget {
+    border-bottom: 0 none;
+    padding-bottom: 0;
+}
+
+.addon-row h5 {
+    font-weight: bold;
+    margin-top: -25px;
+    margin-bottom: 30px;
+}
+
+.addon-row p {
+    margin-bottom: 60px;
+}
+
+.sidebar p {
+    font-size: 19px;
+}
+
+pre {
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+}
+
+.tab-pane li,
+.entry-content li {
+    margin-bottom: 0;
+}
+
+.text-small {
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.btn {
+    -webkit-transition: all 0.1s ease-in-out;
+       -moz-transition: all 0.1s ease-in-out;
+        -ms-transition: all 0.1s ease-in-out;
+         -o-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+}
+
+.button,
+.btn {
+    font-family: "europa", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 18px;
+    background: #ff3700 !important;
+    font-weight: 700;
+    display: inline-block;
+    border: 0 none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    white-space: normal;
+}
+
+.button.blue {
+    color: #fff;
+    background: #488fc0;
+}
+
+.button.blue:hover,
+.button.blue:active {
+    background: #488fc0;
+}
+
+.btn-sm {
+    font-size: 14px;
+    padding: 6px 10px;
+    font-weight: 400;
+}
+
+.button.block {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.button:hover,
+.button:active,
+.btn:hover,
+.btn:active {
+    color: #fff;
+    background: #ff3700;
+}
+
+.soliloquy-checkout-payment .button,
+.checkout-button {
+    background: #f7f8f8 !important;
+    text-align: center;
+    color: #343434 !important;
+    border: 1px solid #e7e8e8;
+}
+
+.soliloquy-checkout-payment .button.active,
+.soliloquy-checkout-payment .button:hover,
+.checkout-button.active,
+.checkout-button:hover {
+    border-color: #ff3700;
+}
+
+a {
+    color: #ff3700;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #040404;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+img.soliloquy-site-preload {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.green {
+    color: #7cc048;
+}
+
+.orange {
+    color: #ff3700;
+}
+
+.blue {
+    color: #488fc0;
+}
+
+.div-sep {
+    width: 50%;
+    height: 1px;
+    border-top: 1px solid #ddd;
+    margin: 90px auto;
+}
+
+code,
+pre,
+pre ol,
+pre span,
+pre li,
+pre ul {
+    font-size: 14px !important;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace !important;
+}
+
+pre {
+    margin-bottom: 30px;
+}
+
+blockquote p {
+    line-height: 1.428571429;
+}
+
+blockquote cite {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+blockquote.pull-right cite {
+    float: right;
+}
+
+.soliloquy-custom-testimonial p {
+    font-size: 36px !important;
+    font-style: italic;
+}
+
+#primary-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.alert {
+    margin-bottom: 35px;
+    background-color: #fcf8e3;
+border-color: #faebcc;
+color: #8a6d3b;
+}
+
+.soliloquy-lite-tag {
+    margin-bottom: 90px;
+}
+
+.soliloquy-lite-icon {
+    text-align: center;
+}
+
+.soliloquy-lite-icon i {
+    font-size: 10em;
+}
+
+.soliloquy-lite-icon i.icon-large {
+    font-size: 12em;
+}
+
+.soliloquy-lite-desc h2 {
+    margin-top: 0;
+}
+
+.soliloquy-video {
+    display: block;
+    outline: none;
+    position: relative;
+}
+
+#soliloquy-video {
+    margin-bottom: 30px;
+}
+
+.video-icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background: transparent url(images/play.png) no-repeat center center;
+}
+
+.archive-sidebar ul,
+.soliloquy-docs-latest {
+    border-top: 1px solid #ddd;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.archive-sidebar h4 {
+    margin-bottom: 30px;
+}
+
+.archive-sidebar li,
+.soliloquy-docs-latest li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin: 0 0 10px;
+    list-style: none;
+}
+
+.soliloquy-docs-latest li {
+    margin-bottom: 0;
+}
+
+.doc-toc ul,
+.doc-toc li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.entry-info {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    font-family: "garamond-premier-pro";
+    font-style: italic;
+    font-size: 16px;
+}
+
+.widget-title {
+    margin: 0 0 30px;
+    font-size: 21px;
+}
+
+.account .gform_wrapper ul,
+.account .gform_wrapper li {
+    list-style: none;
+    padding: 0;
+}
+
+.account .gform_wrapper input,
+.account .gform_wrapper textarea {
+    font-family: "europa", sans-serif;
+}
+
+.account .gform_wrapper .gfield_description {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+#fsb-social-bar {
+	max-width: 100%;
+	margin-bottom: 30px !important;
+}
+
+#fsb-social-bar .fsb-title {
+    margin-top: 6px !important;
+    font-family: "europa", sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px !important;
+}
+
+#fsb-social-bar div {
+	color: #fff !important;
+	height: 26px !important;
+	margin: 5px 10px 0 0 !important;
+	padding: 0 !important;
+	overflow: visible !important;
+	width: auto !important;
+}
+
+#fsb-social-bar div:hover {
+	opacity: 0.8;
+}
+
+#fsb-social-bar a {
+	background: #34495e !important;
+	border-radius: 3px;
+	color: #fff !important;
+	display: inline !important;
+	font-size: 12px !important;
+	height: auto !important;
+	line-height: inherit !important;
+	padding: 6px 0 6px 10px !important;
+	width: auto !important;
+}
+
+#fsb-social-bar .fsb-count {
+	color: #ffffff !important;
+	display: inline !important;
+	font-weight: 600 !important;
+	font-size: inherit !important;
+	line-height: 1.25;
+	margin: 0 !important;
+	background: rgba(56, 56, 56, 0.5);
+	padding: 0.6rem;
+	border-radius: 0 3px 3px 0;
+}
+
+#fsb-social-bar .fsb-service-title {
+	display: inline !important;
+	position: relative;
+	padding: 0 10px 0 0;
+}
+
+#fsb-social-bar .fsb-twitter {
+	background: #00aced !important;
+}
+
+#fsb-social-bar .fsb-facebook {
+	background: #3b5998 !important;
+}
+
+#fsb-social-bar .fsb-pinterest {
+	background: #cb2027 !important;
+}
+
+#fsb-social-bar .fsb-google {
+	background: #dd4b39 !important;
+}
+
+#fsb-social-bar .fsb-linkedin {
+	background: #007bb6 !important;
+}
+
+#fsb-social-bar .fsb-service-title:before {
+	font-family:FontAwesome;
+	font-weight:normal;
+	font-style:normal;
+	display:inline-block;
+	margin-right: 5px
+}
+
+#fsb-social-bar .fsb-facebook .fsb-service-title:before {
+	content: "\f09a";
+}
+
+#fsb-social-bar .fsb-twitter .fsb-service-title:before {
+	content: "\f099";
+}
+
+#fsb-social-bar .fsb-google .fsb-service-title:before {
+	content: "\f0d5";
+}
+
+#fsb-social-bar .fsb-linkedin .fsb-service-title:before {
+	content: "\f0e1";
+}
+
+#fsb-social-bar .fsb-pinterest .fsb-service-title:before {
+	content: "\f0d2";
+}
+
+#hellobar-container a,
+#hellobar-container a:link,
+#hellobar-container a:visited,
+#hellobar-container a:hover {
+	text-decoration: none !important;
+	color: #fffc00 !important;
+	font-weight: bold;
+}
+
+#hellobar-close[style] {
+    display: none !important;
+}
+
+.home-addon {
+    margin-bottom: 30px;
+}
+
+.home-addon-desc {
+    padding: 10px;
+    background: #f5f5f5;
+}
+
+/* ==========================================================================
+   Header Styles
+   ========================================================================== */
+
+#header {
+    background: #fff;
+    padding: 30px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.fixed-header.admin-bar #header {
+    margin-top: 32px;
+}
+
+.site-logo,
+.site-logo a {
+    height: 44px;
+    width: 215px;
+}
+
+.site-logo {
+    margin: 0;
+}
+
+.site-logo a {
+    background: url(images/logo.png) no-repeat scroll 0 0;
+    display: block;
+    outline: none;
+    text-indent: -9999px;
+}
+
+.header-nav {
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav li {
+    float: left;
+    list-style: none;
+}
+
+.header-nav li a {
+    color: #040404;
+    display: inline-block;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 5px;
+}
+
+.header-nav li a:hover,
+.header-nav li.current-menu-item a {
+    background-color: #ff3700;
+    color: #fff;
+}
+
+.header-nav li.soliloquy-checkout a {
+    margin-right: 0;
+}
+
+.header-nav li.convert-active a {
+    background: #ff3700;
+    color: #fff;
+    font-weight: 700;
+}
+
+#loginmodal .modal-header,
+#contactmodal .modal-header {
+    background-color: #ff3700;
+}
+
+#loginmodal .modal-header .modal-title,
+#contactmodal .modal-header .modal-title {
+    color: #fff;
+    font-weight: 700;
+}
+
+#loginmodal label,
+#contactmodal label {
+    font-family: "garamond-premier-pro";
+    font-style: italic;
+    font-size: 18px;
+}
+
+#contactmodal .ginput_complex label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#contactmodal .ginput_complex .help-block {
+    display: none;
+}
+
+#loginmodal ul,
+#contactmodal ul {
+    padding: 0;
+    list-style: none;
+}
+
+#mobile-navigation {
+    background: #343434;
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    top: 0;
+    left: -240px;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#mobile-navigation.soliloquy-mobile-open {
+    left: 0;
+}
+
+#mobile-navigation h3 {
+    font-family: "garamond-premier-pro", serif;
+    font-size: 30px;
+    font-style: italic;
+    color: #737373;
+    text-transform: none;
+    letter-spacing: 0;
+    padding: 0 15px;
+}
+
+#mobile-navigation h3 a,
+#mobile-navigation h3 a:hover {
+    display: inline-block;
+    float: right;
+    color: #fff;
+    padding: 0;
+    border: 0 none;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+#mobile-navigation h3 a:hover {
+    background: transparent;
+}
+
+#mobile-navigation a,
+#mobile-navigation ul,
+#mobile-navigation li {
+    display: block;
+    color: #fff;
+    font-weight: 300;
+}
+
+#mobile-navigation ul {
+    padding: 0;
+    margin: 0;
+}
+
+#mobile-navigation a:hover {
+    background: #ff3700;
+}
+
+#mobile-navigation a:active {
+    background: #488fc0;
+}
+
+#mobile-navigation a {
+    border-bottom: 1px solid #545454;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header.navbar-fixed-top {
+    top: 40px;
+}
+
+.logged-in header.navbar-fixed-top,
+.account header.navbar-fixed-top {
+    top: 0;
+}
+
+.gform_validation_container {
+    display: none;
+}
+
+/* ==========================================================================
+   Entry Title Styles
+   ========================================================================== */
+
+h1.entry-title {
+    font-size: 48px;
+    font-family: "garamond-premier-pro";
+    text-transform: none;
+    font-style: italic;
+    margin: 0 0 30px;
+}
+
+/* ==========================================================================
+   Home Styles
+   ========================================================================== */
+
+.home-hero {
+    margin: 0 0 90px;
+    position: relative;
+}
+
+.home-hero .soliloquy-container .custom-slider-hover {
+    position:absolute;display:table;width:100%;z-index:100;height:100%;
+}
+
+.home-hero .soliloquy-container .custom-slider-hover-inner {
+    display:table-cell;vertical-align:middle;text-align:center;
+}
+
+.home-hero .soliloquy-container .custom-slider-inner {
+    padding:20px 0 35px;
+}
+
+.home-hero .soliloquy-container .custom-slider-inner a {
+    color: #fff;font-weight:bold; text-transform:uppercase;letter-spacing:2px;background:#ff3700;border:3px solid #fff;padding:20px 35px;font-size:20px;
+}
+
+.home-hero .soliloquy-container .soliloquy-slides img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}
+
+.home-hero .soliloquy-container .soliloquy-controls-direction a {
+    opacity: 0;
+    -moz-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+.home-hero .soliloquy-container:hover .soliloquy-controls-direction a {
+    opacity: 1;
+}
+
+.home-hero .soliloquy-container h1 {
+    color: #fff;
+    font-family: "garamond-premier-pro";
+    font-size: 60px;
+    margin: 0 0 60px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25);
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.home-supports-content h2 {
+    font-size: 48px;
+    margin: 0 0 90px;
+}
+
+.home-supports-content p {
+    font-size: 26px;
+}
+
+.home-testimonials-content h2 {
+    font-size: 72px;
+    font-family: "garamond-premier-pro";
+    text-transform: none;
+    font-style: italic;
+    margin: 0 0 90px;
+}
+
+.home-testimonials-content p {
+    font-size: 21px;
+}
+
+.home-testimonials-content blockquote {
+    margin: 0 0 60px;
+}
+
+.menu-primary-mobile {
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   Pricing Table Styles
+   ========================================================================== */
+
+.no-gutter [class*="-lg"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.no-gutter .col-lg-3 {
+    border-left: 1px solid #ddd;
+}
+
+.no-gutter .col-lg-3.last {
+    border-right: 1px solid #ddd;
+}
+
+.pricing-table {
+    margin: 60px 0 0;
+}
+
+.pricing-table ul,
+.pricing-table ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.pricing-table .features-column {
+    border-left: 0 none;
+}
+
+.pricing-table .features-column .more-subscribers {
+    height: 226px;
+    background: url(images/moresubscribers.html) no-repeat scroll 25% 75%;
+}
+
+.pricing-table .features-column .more-subscribers.bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing-table .features-column .feature-title-column {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #f7f8f8;
+    padding-left: 20px;
+}
+
+.pricing-table .features-column .feature-title-column li {
+    padding: 14px 0;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.pricing-table .features-column .feature-title-column .feature-title.first {
+    padding: 16px 0 15px;
+}
+
+.pricing-table .feature-column {
+    position: relative;
+}
+
+.pricing-table .feature-column li {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.pricing-table .feature-column .plan-title {
+    border-top: 1px solid #ddd;
+    background: #f7f8f8;
+}
+
+.pricing-table .feature-column .plan-title.plan-alt {
+    background: #162937;
+}
+
+.pricing-table .feature-column .plan-title .plan-special {
+    position: absolute;
+    display: block;
+    top: -3px;
+    left: -3px;
+}
+
+.pricing-table .feature-column .plan-title h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.pricing-table .feature-column .plan-title.plan-alt h3,
+.pricing-table .feature-column .plan-title.plan-alt .feature-subtitle {
+    color: #fff;
+}
+
+.pricing-table .feature-column .plan-title .feature-subtitle {
+    font-size: 15px;
+    color: #808080;
+    font-family: "garamond-premier-pro";
+}
+
+.pricing-table .feature-column .plan-price .sign {
+    font-size: 24px;
+    vertical-align: top;
+    display: inline-block;
+    color: #162937;
+}
+
+.pricing-table .feature-column .plan-price .price {
+    font-size: 48px;
+    line-height: 1;
+    color: #162937;
+}
+
+.pricing-table .feature-column .plan-price .small-price .sign {
+    font-size: 12px;
+    color: #a94442;
+}
+
+.pricing-table .feature-column .plan-price .small-price .price {
+    font-size: 24px;
+    color: #a94442;
+}
+
+.pricing-table .feature-column .plan-feature.line-height {
+    line-height: 1.15;
+}
+
+.pricing-table .feature-column .plan-feature {
+
+}
+
+.pricing-table .no-upgrade {
+    position: absolute;
+    height: 100%;
+    z-index: 2000;
+    background: #fff;
+    opacity: .8;
+    filter: alpha(opacity=80);
+}
+
+.pricing-table .no-upgrade-alt,
+.pricing-table .last.no-upgrade-alt {
+    border-color: #f3f3f3;
+}
+
+.pricing-table .has-upgrade {
+    border-right: 1px solid #ddd;
+    margin-right: -1px;
+    z-index: 20;
+}
+
+.pricing-table .satisfaction {
+    padding: 20px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+.satisfaction .guarantee-badge {
+    float: left;
+    width: 93px;
+    height: 102px;
+    background: url(images/moneyback.png) no-repeat scroll 0 0;
+    margin: 33px 35px 0 0;
+}
+
+.checkout .satisfaction .guarantee-badge {
+    margin-top: 0;
+}
+
+.checkout .satisfaction h4 {
+    margin-top: 0;
+}
+
+.checkout .satisfaction p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.pricing-table .satisfaction .guarantee-title {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.pricing-table .satisfaction .guarantee-desc {
+    line-height: 1.5;
+    padding: 0;
+}
+
+.pricing-table .edd_purchase_submit_wrapper a.edd-add-to-cart {
+    overflow: visible;
+}
+
+.pricing-table .popular-badge {
+    background: url(images/popular.png) no-repeat scroll 0 0;
+    width: 97px;
+    height: 75px;
+    display: block;
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    z-index: 100;
+}
+
+/* ==========================================================================
+   Checkout Styles
+   ========================================================================== */
+
+.checkout .edd_cart_total {
+    height: 27px;
+}
+
+.checkout #edd_checkout_form_wrap p.form-group {
+    margin-bottom: 15px;
+}
+
+.checkout .form-group input {
+    font-family: "europa";
+}
+
+.checkout #edd_checkout_cart .edd_cart_header_row th,
+.checkout #edd_checkout_cart .edd_cart_footer_row,
+.checkout #edd_checkout_cart td {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #f7f8f8;
+}
+
+.checkout #edd_checkout_cart .edd_cart_footer_row,
+.checkout #edd_checkout_cart td {
+    background: transparent;
+}
+
+.checkout .remove-item {
+    display: inline-block;
+    position: relative;
+    transition: none;
+    vertical-align: middle;
+    margin-left: 0;
+    top: -1px;
+    color: #ccc;
+}
+
+.edd_discount_remove {
+    transition: none;
+}
+
+.checkout .remove-item:hover {
+    background-position: -10px 0;
+}
+
+.checkout #edd_checkout_cart_form,
+#order_summary,
+.account table {
+    width: 100%;
+    clear: both;
+}
+
+.checkout #edd_checkout_cart,
+#edd_purchase_receipt,
+#edd_user_history,
+#edd_purchase_receipt_products,
+#order_summary,
+.account table {
+    border-collapse: collapse;
+}
+
+#edd_purchase_receipt_products li {
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-family: "europa";
+}
+
+#primary-content #edd_purchase_receipt thead tr,
+#primary-content #edd_purchase_receipt_products thead tr,
+#primary-content #edd_purchase_receipt tr td:first-child,
+#primary-content #edd_purchase_receipt_products tr td:first-child,
+#primary-content #edd_user_history tr,
+#primary-content #edd_user_history tr td:first-child {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.checkout #edd_cc_fields,
+.checkout #edd_purchase_form,
+.checkout .row-fluid.clear.clearfix,
+.checkout #content {
+	margin-bottom: 0;
+}
+
+.checkout .soliloquy-checkout-payment {
+    margin-bottom: 30px !important;
+}
+
+.optin-monster-checkout-progress {
+	background: #eee;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.optin-monster-checkout-progress a {
+	margin: 0 !important;
+	text-align: center;
+}
+
+.checkout #edd_purchase_form legend,
+.checkout #edd_purchase_form .alert {
+	margin-bottom: 30px;
+}
+
+#edd_purchase_form fieldset {
+	margin-bottom: 30px;
+}
+
+.checkout #edd_cc_fields .row {
+    margin-bottom: 15px;
+}
+
+#edd_purchase_form p,
+#edd_purchase_form .control-group {
+	margin: 0 0 10px
+}
+
+.checkout #edd_checkout_cart {
+    margin-bottom: 30px;
+}
+
+#edd_purchase_form input[type="checkbox"] {
+	width: auto !important;
+	vertical-align: middle;
+	margin: 0 6px 0 0 !important;
+	display: inline !important;
+}
+
+#edd_purchase_form label {
+	font-size: 21px !important;
+	font-weight: bold;
+	font-style: italic;
+	font-family: "garamond-premier-pro";
+}
+
+#edd_purchase_form .help-block {
+    margin-top: 0;
+}
+
+#edd_purchase_form .help-block.small {
+	font-size: 15px;
+	line-height: 1.4;
+	font-weight: 300;
+	display: block;
+	font-style: normal;
+	font-family: "europa";
+}
+
+#edd_purchase_form .help-inline {
+	font-size: 16px !important;
+	vertical-align: middle;
+	font-weight: normal !important;
+}
+
+#edd_purchase_form .small-margin {
+	margin-bottom: 4px;
+}
+
+#edd-purchase-button {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#edd-purchase-button:active,
+#edd-purchase-button:visited {
+	outline: none;
+}
+
+.checkout .loading-icon,
+#edd-purchase-button .loading-icon {
+	display: none;
+}
+
+.checkout .active .loading-icon,
+#edd-purchase-button.submitted .loading-icon {
+	display: inline;
+	vertical-align: middle;
+}
+
+.error-text,
+.password-error,
+.user-error,
+.email-error,
+.card-error,
+.zip-error {
+	color: #b94a48;
+	display: none;
+	font-size: 13px;
+}
+
+.error-basic .error-text,
+.error-password .password-error,
+.error-user .user-error,
+.error-email .email-error,
+.error-card .card-error,
+.error-zip .zip-error {
+	display: inline;
+}
+
+.payment-icon {
+	margin-right: 3px;
+}
+
+#edd_card_name,
+#edd_card_number,
+#edd_card_cvv,
+#edd_card_zip {
+	background: url(images/lock.png) no-repeat scroll 98.5% 50%;
+}
+
+.edd-cart-ajax-alert {
+	vertical-align: text-bottom;
+}
+
+.checkout .soliloquy-select-payment {
+    margin-top: 30px;
+}
+
+.alert,
+#account .edd_password_change_notice {
+	padding: 8px 14px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin-bottom: 25px;
+}
+
+.checkout .om-select-payment {
+    margin: 30px 0 0;
+}
+
+#account .edd_password_change_notice {
+    background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	color: #c09853;
+}
+
+.alert-error {
+    color: #b94a48;
+    background-color: #f2dede;
+    border: 1px solid #eed3d7;
+}
+
+.alert p {
+	margin: 0;
+}
+
+.checkout #edd_checkout_form_wrap fieldset,
+.checkout #edd_checkout_form_wrap fieldset#edd_cc_fields,
+.account fieldset {
+    background: none;
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+}
+
+.checkout #edd_checkout_form_wrap legend,
+.account legend {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0 0 15px;
+}
+
+.checkout #edd_purchase_form input[type="text"],
+.checkout #edd_purchase_form input[type="password"],
+.checkout #edd_purchase_form input[type="email"] {
+    padding: 8px 12px;
+    width: 100%;
+}
+
+.checkout #edd_checkout_form_wrap .edd-payment-icons {
+    margin-bottom: 0;
+}
+
+.checkout .optin-monster-payment-type img {
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.checkout th.edd_cart_total p {
+    float: left;
+    position: relative;
+    font-family: "europa";
+    font-size: 14px;
+}
+
+.checkout .edd_discount {
+    font-weight: 400;
+}
+
+.checkout .edd-discount-link {
+    vertical-align: bottom;
+    font-family: "garamond-premier-pro";
+    font-size: 14px;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.checkout .edd-discount-link small {
+    font-weight: 300;
+}
+
+.checkout #edd-discount {
+    padding: 3px 5px;
+    position: absolute;
+    right: -235px;
+    width: 225px;
+    top: -3px;
+    font-size: 12px;
+    height: 27px;
+}
+
+.checkout .fa-spinner {
+    position: absolute;
+    right: -5px;
+    top: 4px;
+    right: -255px;
+}
+
+.checkout #edd_checkout_cart .edd_discount_remove {
+    top: 1px;
+}
+
+#edd_purchase_receipt th,
+#edd_purchase_receipt_products th,
+#primary-content #edd_user_history th,
+#order_summary th {
+    background: #fafafa;
+padding: 1.387em;
+text-align: left;
+border: 1px solid #eee;
+color: #666;
+}
+
+#edd_purchase_receipt td,
+#primary-content #edd_user_history td,
+#edd_purchase_receipt_products td,
+#order_summary td {
+    line-height: 25px;
+vertical-align: middle;
+background: #fff;
+text-align: left;
+border: 1px solid #eee;
+color: #666;
+padding: .5em 1.387em;
+}
+
+table#edd_purchase_receipt_products li {
+    margin-bottom: 0 !important;
+}
+
+.checkout .width-half {
+    width: 49% !important;
+}
+
+.edd_receipt_fees li {
+    font-family: "europa", sans-serif;
+    font-size: 14px;
+    margin-bottom: 0 !important;
+}
+
+#edd_user_history tr {
+    font-size: 12px;
+}
+.edd_download_file {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 14px;
+}
+
+#edd-stripe-payment-errors {
+    margin-top: 30px;
+}
+
+#edd-stripe-payment-errors .edd_errors {
+    padding: 8px 14px;
+text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+margin-bottom: 25px;
+color: #a94442;
+background-color: #f2dede;
+border: 1px solid #ebccd1;
+font-family: "europa", sans-serif;
+font-size: 14px;
+}
+
+.checkout .paypal-icon {
+    display: inline-block;
+    width: 99px;
+    height: 25px;
+    background: url(images/paypal.png) no-repeat scroll 0 0;
+    outline: none;
+    vertical-align: middle;
+}
+
+.checkout .cc-icon {
+    display: inline-block;
+    width: 123px;
+    height: 19px;
+    background: url(images/cards.png) no-repeat scroll 0 0;
+    outline: none;
+    vertical-align: middle;
+}
+
+table.table>tbody>tr>td,
+table.table>thead>tr>th {
+    vertical-align: middle;
+}
+
+table.table-large>tbody>tr>td,
+table.table-large>thead>tr>th {
+    padding: 30px;
+}
+
+table.table-large td.title {
+    font-family: "garamond-premier-pro", serif;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+
+.soliloquy-lite-table .title {
+    font-family: "garamond-premier-pro", serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.soliloquy-lite-table th {
+    font-family: "garamond-premier-pro", serif;
+    font-size: 21px;
+    font-weight: normal;
+    padding: 15px !important;
+}
+
+.soliloquy-faq-title {
+    margin: 60px 0;
+}
+
+/* ==========================================================================
+   Account Styles
+   ========================================================================== */
+
+.account #tabs {
+    position: relative;
+}
+
+.account .edd_sl_license_key {
+    text-transform: none;
+    background: #fff;
+    left: -18px;
+    top: 31px;
+    letter-spacing: 0;
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+.account .tab-pane {
+    margin-top: 30px;
+}
+
+.account .pricing-table li {
+    font-family: "europa";
+}
+
+/* ==========================================================================
+   Sidebar Styles
+   ========================================================================== */
+
+.widget {
+    margin-bottom: 60px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 60px;
+}
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+
+#footer {
+    padding: 30px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer-nav {
+    padding: 0;
+    margin: 1px 0 0;
+}
+
+.footer-nav li {
+    float: left;
+    list-style: none;
+}
+
+.footer-nav li a {
+    color: #848484;
+    display: inline-block;
+    padding: 0 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.footer-nav li a:hover,
+.footer-nav li.current-menu-item a {
+    color: #ff3700;
+}
+
+#footer p {
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   Retina Styles
+   ========================================================================== */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+    .site-logo a {
+        background-image: url(images/logo%402x.png);
+        background-size: 215px 44px;
+    }
+
+    .satisfaction .guarantee-badge {
+        background-image: url(images/moneyback%402x.png);
+        background-size: 93px 102px;
+    }
+
+    .pricing-table .popular-badge {
+        background-image: url(images/popular%402x.png);
+        background-size: 97px 75px;
+    }
+
+    #edd_card_name,
+    #edd_card_number,
+    #edd_card_cvv,
+    #edd_card_zip {
+    	background-image: url(images/lock%402x.png);
+    	background-size: 15px 18px;
+    }
+
+    .checkout .paypal-icon {
+        background-image: url(images/paypal%402x.png);
+        background-size: 99px 25px;
+    }
+
+    .checkout .cc-icon {
+        background-image: url(images/cards%402x.png);
+        background-size: 123px 19px;
+    }
+
+    .video-icon {
+        background-image: url(images/play%402x.png);
+        background-size: 75px 75px;
+    }
+
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+
+    table.table-large>tbody>tr>td,
+    table.table-large>thead>tr>th {
+        padding: 10px;
+    }
+
+    .soliloquy-custom-testimonial p {
+        font-size: 24px !important;
+    }
+
+    .site-title {
+        clear: both;
+    }
+
+    .site-logo {
+        width: 237px;
+        height: 18px;
+    }
+
+    .site-logo a {
+        background-image: url(images/mobile-logo.png);
+        width: 137px;
+        height: 28px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .home-supports-content h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .home-supports-content p {
+        font-size: 20px;
+    }
+
+    .home-supports-content img {
+        display: none;
+    }
+
+    .home-testimonials-content h2 {
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+
+    body.fixed-header {
+        padding-top: 123px;
+    }
+
+    .site-logo {
+        float: left;
+        margin: 0;
+    }
+
+    .soliloquy-mobile-nav {
+        float: right;
+        display: block;
+        outline: none;
+        color: #222;
+    }
+
+    .no-gutter .col-lg-3 {
+        border-right: 1px solid #ddd;
+        margin-bottom: 1px;
+    }
+
+    .pricing-table .popular-badge {
+        top: 3px;
+        right: 20px;
+    }
+
+    .pricing-table .satisfaction .guarantee-badge {
+        width: 100%;
+        background-position: 50% 0;
+        margin: 0 0 15px;
+    }
+
+    .pricing-table .satisfaction .guarantee-desc {
+        margin-bottom: 0;
+    }
+
+    .checkout .soliloquy-payment-type {
+        margin-bottom: 15px;
+    }
+
+    .checkout #edd_cc_fields .col-lg-5,
+    .checkout #soliloquy-checkout-secure {
+        display: none;
+    }
+
+    .checkout #edd_payment_mode_select {
+        margin-top: 30px !important;
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
+
+    .footer-nav {
+        text-align: center;
+        margin: 0 0 15px;
+    }
+
+    .footer-nav li {
+        float: none;
+        display: inline-block;
+    }
+
+    .footer-content .text-right {
+        text-align: center;
+    }
+
+    .footer-content .pull-right {
+        float: none !important;
+    }
+
+    .soliloquy-lite-icon i {
+        display: none;
+    }
+
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+        .site-logo a {
+            background-image: url(images/mobile-logo%402x.png);
+            background-size: 137px 28px;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .home-hero .soliloquy-container h1 {
+        font-size: 36px;
+    }
+    .home-hero .soliloquy-container .custom-slider-inner a {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .pricing-table .popular-badge {
+        right: -37px;
+    }
+
+    .home-hero .soliloquy-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .home-hero .soliloquy-container .custom-slider-inner a {
+        font-size: 10px;
+        padding: 8px 5px;
+    }
+
+}
+
+/* ==========================================================================
+   Hello Bar Styles
+   ========================================================================== */
+
+#hellobar-container{font-size:14px;font-weight:normal;line-height:30px;color:#fff;border-bottom-color:#fff}#hellobar-container a,#hellobar-container a:link,#hellobar-container a:visited{color:#80ccff;background-color:transparent}#hellobar-content{height:100%}a#hellobar-open,a#hellobar-open:link,a#hellobar-open:visited{background-color:#eb593c;border-color:#fff}a#hellobar-open:hover{background-color:#ff7f62}#hellobar-wrapper{margin:0;overflow:visible;padding:0;position:relative;width:100%;z-index:2}#hellobar-pusher{position:relative;overflow:hidden}#hellobar-wrapper.hellobar-button #hellobar-container .button,#hellobar-wrapper.hellobar-button #hellobar-container .button:link,#hellobar-wrapper.hellobar-button #hellobar-container .button:visited{position:relative;border-radius:4px;border-width:0;-moz-border-radius:4px;-webkit-border-radius:4px;padding:2px 8px 1px 8px;margin:0 7px;text-decoration:none;cursor:pointer;font-size:.854em}#hellobar-wrapper.hellobar-button.hellobar-dark-images #hellobar-container .button,#hellobar-wrapper.hellobar-button.hellobar-dark-images #hellobar-container .button:link,#hellobar-wrapper.hellobar-button.hellobar-dark-images #hellobar-container .button:visited{background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRhNDg0NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyZDJjMjkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:#4a4844;background:-moz-linear-gradient(top,#4a4844 0,#2d2c29 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#4a4844),color-stop(100%,#2d2c29));background:-webkit-linear-gradient(top,#4a4844 0,#2d2c29 100%);background:-o-linear-gradient(top,#4a4844 0,#2d2c29 100%);background:-ms-linear-gradient(top,#4a4844 0,#2d2c29 100%);background:linear-gradient(top,#4a4844 0,#2d2c29 100%);box-shadow:1px 1px 3px rgba(0,0,0,0.28);-moz-box-shadow:1px 1px 3px rgba(0,0,0,0.28);-webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.28);color:#fff!important}#hellobar-wrapper.hellobar-button.hellobar-dark-images #hellobar-container .button:hover{background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY3NjQ1ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0ZjRkNDciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:#67645f;background:-moz-linear-gradient(top,#67645f 0,#4f4d47 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#67645f),color-stop(100%,#4f4d47));background:-webkit-linear-gradient(top,#67645f 0,#4f4d47 100%);background:-o-linear-gradient(top,#67645f 0,#4f4d47 100%);background:-ms-linear-gradient(top,#67645f 0,#4f4d47 100%);background:linear-gradient(top,#67645f 0,#4f4d47 100%);border-color:#414141}#hellobar-wrapper.hellobar-dark-images #hellobar-container a.hellobar-cta-link:active{top:1px}#hellobar-wrapper.hellobar-button.hellobar-light-images #hellobar-container .button,#hellobar-wrapper.hellobar-button.hellobar-light-images #hellobar-container .button:link,#hellobar-wrapper.hellobar-button.hellobar-light-images #hellobar-container .button:visited{background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjYmNiY2IiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:#fff;background:-moz-linear-gradient(top,#fff 0,#cbcbcb 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#fff),color-stop(100%,#cbcbcb));background:-webkit-linear-gradient(top,#fff 0,#cbcbcb 100%);background:-o-linear-gradient(top,#fff 0,#cbcbcb 100%);background:-ms-linear-gradient(top,#fff 0,#cbcbcb 100%);background:linear-gradient(top,#fff 0,#cbcbcb 100%);box-shadow:1px 1px 3px rgba(0,0,0,0.28);-moz-box-shadow:1px 1px 3px rgba(0,0,0,0.28);-webkit-box-shadow:1px 1px 3px rgba(0,0,0,0.28);color:#333!important}#hellobar-wrapper.hellobar-button.hellobar-light-images #hellobar-container .button:hover{background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYmRiZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:#fff;background:-moz-linear-gradient(top,#fff 0,#dbdbdb 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#fff),color-stop(100%,#dbdbdb));background:-webkit-linear-gradient(top,#fff 0,#dbdbdb 100%);background:-o-linear-gradient(top,#fff 0,#dbdbdb 100%);background:-ms-linear-gradient(top,#fff 0,#dbdbdb 100%);background:linear-gradient(top,#fff 0,#dbdbdb 100%)}#hellobar-wrapper.hellobar-button.hellobar-light-images #hellobar-container .button:active{top:1px}#hellobar-container{margin:0;overflow:visible;padding:0;position:relative;text-align:center;width:100%;z-index:1000;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#fff}#hellobar-container.texture{background-image:url(textures.html);background-repeat:repeat-x}#hellobar-container.texture.noise{background-position:0 0}#hellobar-container.texture.hard-shine{background-position:0 -30px}#hellobar-container.texture.light-gradient{background-position:0 -60px}#hellobar-container.texture.dark-gradient{background-position:0 -90px}#hellobar-container.texture.carbon{background-position:0 -120px}#hellobar-container.texture.paper{background-position:0 -150px}#hellobar-container.texture.diagonal{background-position:0 -180px}#hellobar-container.texture.linen{background-position:0 -210px}#hellobar-container.texture.stitch{background-position:0 -240px}#hellobar-container.texture.diamond{background-position:0 -270px}#hellobar-container a,#hellobar-container a:link,#hellobar-container a:visited,#hellobar-container a:hover{padding:0;border:0;text-decoration:underline}#hellobar-container a:hover{text-decoration:none}#hellobar-shadow{position:absolute;bottom:-8px;left:0;width:100%;height:8px;line-height:8px;overflow:hidden;background:url(sprite-8bit.png)}a#hellobar-logo,a#hellobar-logo:link,a#hellobar-logo:visited{background:url(sprite-8bit.png) 0 -172px;height:0;left:20px;overflow:hidden;padding:22px 0 0;position:absolute;top:20px;width:44px}.hellobar-light-images a#hellobar-logo,.hellobar-light-images a#hellobar-logo:link,.hellobar-light-images a#hellobar-logo:visited{background-position:0 -202px}#hellobar-wrapper.hellobar-left a#hellobar-logo,#hellobar-wrapper.hellobar-left a#hellobar-logo:link,#hellobar-wrapper.hellobar-left a#hellobar-logo:visited{left:auto;right:20px}a#hellobar-close,a#hellobar-close:link,a#hellobar-close:visited{background-image:url(sprite-8bit.png);background-position:0 58px;display:block;height:0;overflow:hidden;padding:19px 0 0 0;position:absolute;right:20px;top:20px;width:18px;z-index:10;border:0}.hellobar-light-images a#hellobar-close,.hellobar-light-images a#hellobar-close:link,.hellobar-light-images a#hellobar-close:visited{background-position:0 19px}#hellobar-wrapper.hellobar-left a#hellobar-close,#hellobar-wrapper.hellobar-left a#hellobar-close:link,#hellobar-wrapper.hellobar-left a#hellobar-close:visited{right:auto;left:20px}a#hellobar-close:hover{background-position:0 77px;padding:20px 0 0;border:0}.hellobar-light-images a#hellobar-close:hover{background-position:0 38px}a#hellobar-open,a#hellobar-open:link,a#hellobar-open:visited{background-image:url(sprite-8bit.png);background-repeat:no-repeat;background-position:0 -8px;display:block;height:0;overflow:hidden;padding:80px 0 0;position:absolute;right:10px;top:-96px;width:35px;z-index:100;box-shadow:0 0 5px rgba(0,0,0,0.35);-moz-box-shadow:0 0 5px rgba(0,0,0,0.35);-webkit-box-shadow:0 0 5px rgba(0,0,0,0.35);-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Color=#e5e5e5, direction=120, strength=3)";filter:progid:DXImageTransform.Microsoft.Shadow(Color=#e5e5e5,direction=120,strength=3);-webkit-border-bottom-right-radius:5px;-webkit-border-bottom-left-radius:5px;-moz-border-radius-bottomright:5px;-moz-border-radius-bottomleft:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;border-width:3px;border-style:solid}.hellobar-light-images a#hellobar-open,.hellobar-light-images a#hellobar-open:link,.hellobar-light-images a#hellobar-open:visited{background-position:0 -88px}#hellobar-wrapper.hellobar-left a#hellobar-open,#hellobar-wrapper.hellobar-left a#hellobar-open:link,#hellobar-wrapper.hellobar-left a#hellobar-open:visited{right:auto;left:10px}a#hellobar-open:hover{padding:80px 0 0;border-width:3px;border-style:solid}
+
+@media (max-width: 800px) {
+
+	#hellobar-pusher[style],
+	#hellobar-wrapper[style] {
+		display: none !important;
+	}
+	header.navbar-fixed-top { top: 0; }
+
+}
+
+#hellobar-content {
+    text-transform: uppercase;
+}
