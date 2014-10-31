@@ -1,0 +1,16 @@
+HTTrack3.48-19 launched on Thu, 30 Oct 2014 04:45:51 at http://www.dirpy.com/studio?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGc2en3nHxA4 +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -iC2 http://www.dirpy.com/studio?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGc2en3nHxA4 -O "/home/anb/sites/httrack/httrack" -n -%P -N0 -s2 -p7 -D -a -K0 -c4 -%k -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+04:46:03	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
+04:46:06	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): s7.addthis.com/js/300/addthis_widget.js
+04:46:23	Warning: 	HTML file (4565 bytes) retransferred due to lack of cache: www.dirpy.com/
+04:46:24	Warning: 	HTML file (4511 bytes) retransferred due to lack of cache: www.dirpy.com/contact
+04:46:27	Error: 	"Not Found" (404) at link g2.gumgum.com/dvtp_src.js (from cdn.doubleverify.com/dvtp_src.js?ctx=1241058&cmp=2285192&sid=gumgum&plc=22851921&num=&adid=&advid=1241059&adsrv=0&region=30&btreg=&btadsrv=&crt=&crtname=&chnl=&unit=&pid=&uid=&dvtagver=6.1.src)
+
+HTTrack Website Copier/3.48-19 mirror complete in 40 seconds : 31 links scanned, 43 files written (1613153 bytes overall), 33 files updated [768187 bytes received at 19204 bytes/sec], 942224 bytes transferred using HTTP compression in 26 files, ratio 45%, 1.7 requests per connection
+(1 errors, 4 warnings, 0 messages)

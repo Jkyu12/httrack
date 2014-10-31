@@ -1,0 +1,25 @@
+HTTrack3.47-21+libhtsjava.so.2 launched on Thu, 10 Apr 2014 02:30:05 at http://htmlstream.com/preview/unify-v1.4/ +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -w http://htmlstream.com/preview/unify-v1.4/ -O "/home/anb/sites/test/boot/unity/unity" -n -%P -N0 -s2 -p7 -D -a -K0 -c4 -%k -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2013], %s -->" +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+02:30:06	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/robots.txt (from primary/primary)
+02:43:21	Warning: 	File not parsed, looks like binary: htmlstream.com/preview/unify-v1.4/assets/plugins/sky-forms/version-2.0.1/captcha/image.php?<?php%20echo%20time();%20?>
+02:43:21	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/index.hmtl (from htmlstream.com/preview/unify-v1.4/)
+02:43:22	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/blog_item.html (from htmlstream.com/preview/unify-v1.4/blog_medium.html)
+02:46:51	Warning: 	File not parsed, looks like binary: htmlstream.com/preview/unify-v1.4/assets/plugins/sky-forms/version-2.0.1/captcha/image.php?<?php%20echo%20time();%20?>
+02:47:47	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/index.hmtl (from htmlstream.com/preview/unify-v1.4/)
+02:47:47	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/assets/css/themes/headers/default.css (from htmlstream.com/preview/unify-v1.4/page_home2.html)
+02:47:47	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/assets/plugins/hover-dropdown.min.js (from htmlstream.com/preview/unify-v1.4/page_home4.html)
+02:47:47	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/email-templates/modern/img/logo/icon_present.png (from htmlstream.com/preview/unify-v1.4/email-templates/modern/email_modern_green.html)
+02:47:47	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/assets/css/headers/header1.css (from htmlstream.com/preview/unify-v1.4/page_coming_soon.html)
+02:47:47	Error: 	"" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/assets/css/responsive.css (from htmlstream.com/preview/unify-v1.4/page_coming_soon.html)
+02:47:47	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/assets/plugins/css/animate.css (from htmlstream.com/preview/unify-v1.4/page_coming_soon.html)
+02:47:47	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/assets/js/pages/feature_btn_effects.js (from htmlstream.com/preview/unify-v1.4/feature_btn_effects.html)
+02:47:48	Error: 	"Internal Server Error" (500) after 2 retries at link htmlstream.com/preview/unify-v1.4/assets/css/pages/z_feature_google_map.css (from htmlstream.com/preview/unify-v1.4/feature_maps_google.html)
+
+HTTrack Website Copier/3.47-21 mirror complete in 17 minutes 43 seconds : 672 links scanned, 642 files written (31306707 bytes overall) [23641991 bytes received at 22240 bytes/sec], 9366862 bytes transferred using HTTP compression in 274 files, ratio 14%, 1.3 requests per connection
+(12 errors, 2 warnings, 0 messages)

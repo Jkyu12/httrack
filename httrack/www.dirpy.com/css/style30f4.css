@@ -1,0 +1,60 @@
+html, body, .container { height: 100% }
+body{padding-top: 20px}
+
+body{
+    color: #d3d3d3;
+}
+
+.well{
+   color: black;
+}
+
+.panel .panel-heading{
+   /* background: #333; */
+    border-bottom: 1px solid black;
+}
+
+.custom-form .control-label{text-align: left}
+
+.wrapper .custom-form .panel, .wrapper .panel{
+    border: none;
+}
+
+.td-padd-lr{
+    padding: 0 5px;
+}
+
+.td-padd-dwn{
+    padding-bottom: 3px;
+}
+
+.td-padd-top{
+    padding-top: 3px;
+}
+
+.mar-l{
+    margin-left: 15px;
+}
+
+.buttons{
+    padding-top: 15px;
+    text-align: right;
+}
+
+.audio_format{
+    padding: 6px 5px; 
+    font-size:12px;
+    margin-right: 5px;
+}
+
+.td-padd-r{
+    padding-right: 10px;
+}
+
+.search_bar{margin-top:20px}
+
+.social a {text-decoration: none}
+
+.panel-default {border: none}
+.panel-default .panel-heading, .panel-default .panel-footer {background: white}
+.panel-default .panel-title{font-weight: bold; font-size: 15px}
