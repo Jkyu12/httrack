@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<title>İzlesene / magician - Son Yüklenenler</title>
+<description>magician İzlesene kanalındaki videolar.</description>
+<link>http://www.izlesene.com/magician</link>
+<language>tr-tr</language>
+<image>
+<title>İzlesene / magician - Son Yüklenenler</title>
+<link>http://www.izlesene.com/magician</link>
+<url></url>
+<width>130</width>
+<height>130</height>
+</image>
+<atom:link href="http://www.izlesene.com/magician/rss/latest" rel="self" type="application/rss+xml" />
+<item>
+<title><![CDATA[ Magician (1. Bölüm) - Parça 3  ]]></title>
+<description><![CDATA[   ]]></description>
+<content:encoded><![CDATA[ <a href="http://www.izlesene.com/video/magician-1-bolum-parca-3/6144437" target="_blank" title="Magician (1. Bölüm) - Parça 3"><img src="http://i6.imgiz.com/rshots/6144/magician-1-bolum-parca-3_6144437-54_640x360.jpg" height="360" width="640" alt="Magician (1. Bölüm) - Parça 3"></a><p></p>  ]]></content:encoded>
+<dc:creator>magician</dc:creator>
+<guid isPermaLink="true">http://www.izlesene.com/video/magician-1-bolum-parca-3/6144437</guid>
+<media:thumbnail url="http://i6.imgiz.com/rshots/6144/magician-1-bolum-parca-3_6144437-54_640x360.jpg" width="640" height="360"  />
+<media:player url="http://www.izlesene.com/embedplayer/6144437" width="640" height="360"  />
+<pubDate>Tue, 24 Apr 2012 11:29:14 GMT</pubDate>
+<link>http://www.izlesene.com/video/magician-1-bolum-parca-3/6144437</link>
+</item>
+
+<item>
+<title><![CDATA[ Magician (1. Bölüm) - Parça 2  ]]></title>
+<description><![CDATA[   ]]></description>
+<content:encoded><![CDATA[ <a href="http://www.izlesene.com/video/magician-1-bolum-parca-2/6144433" target="_blank" title="Magician (1. Bölüm) - Parça 2"><img src="http://i2.imgiz.com/rshots/6144/magician-1-bolum-parca-2_6144433-54_640x360.jpg" height="360" width="640" alt="Magician (1. Bölüm) - Parça 2"></a><p></p>  ]]></content:encoded>
+<dc:creator>magician</dc:creator>
+<guid isPermaLink="true">http://www.izlesene.com/video/magician-1-bolum-parca-2/6144433</guid>
+<media:thumbnail url="http://i2.imgiz.com/rshots/6144/magician-1-bolum-parca-2_6144433-54_640x360.jpg" width="640" height="360"  />
+<media:player url="http://www.izlesene.com/embedplayer/6144433" width="640" height="360"  />
+<pubDate>Tue, 24 Apr 2012 11:28:58 GMT</pubDate>
+<link>http://www.izlesene.com/video/magician-1-bolum-parca-2/6144433</link>
+</item>
+
+<item>
+<title><![CDATA[ Magician (1. Bölüm) - Parça 1  ]]></title>
+<description><![CDATA[   ]]></description>
+<content:encoded><![CDATA[ <a href="http://www.izlesene.com/video/magician-1-bolum-parca-1/6144431" target="_blank" title="Magician (1. Bölüm) - Parça 1"><img src="http://i8.imgiz.com/rshots/6144/magician-1-bolum-parca-1_6144431-54_640x360.jpg" height="360" width="640" alt="Magician (1. Bölüm) - Parça 1"></a><p></p>  ]]></content:encoded>
+<dc:creator>magician</dc:creator>
+<guid isPermaLink="true">http://www.izlesene.com/video/magician-1-bolum-parca-1/6144431</guid>
+<media:thumbnail url="http://i8.imgiz.com/rshots/6144/magician-1-bolum-parca-1_6144431-54_640x360.jpg" width="640" height="360"  />
+<media:player url="http://www.izlesene.com/embedplayer/6144431" width="640" height="360"  />
+<pubDate>Tue, 24 Apr 2012 11:28:36 GMT</pubDate>
+<link>http://www.izlesene.com/video/magician-1-bolum-parca-1/6144431</link>
+</item>
+
+</channel>
+</rss>

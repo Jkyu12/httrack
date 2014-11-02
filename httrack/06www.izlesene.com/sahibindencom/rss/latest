@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<title>İzlesene / sahibinden.com - Son Yüklenenler</title>
+<description>sahibinden.com İzlesene kanalındaki videolar.</description>
+<link>http://www.izlesene.com/sahibindencom</link>
+<language>tr-tr</language>
+<image>
+<title>İzlesene / sahibinden.com - Son Yüklenenler</title>
+<link>http://www.izlesene.com/sahibindencom</link>
+<url>http://i9.imgiz.com/talent/images/10483675_1411557104_avatar_cropped.png</url>
+<width>130</width>
+<height>130</height>
+</image>
+<atom:link href="http://www.izlesene.com/sahibindencom/rss/latest" rel="self" type="application/rss+xml" />
+<item>
+<title><![CDATA[ Sahibinden.com Reklam Filmi - Ev  ]]></title>
+<description><![CDATA[ sahibinden.com Reklam Filmi - Ev  ]]></description>
+<content:encoded><![CDATA[ <a href="http://www.izlesene.com/video/sahibindencom-reklam-filmi-ev/7775249" target="_blank" title="Sahibinden.com Reklam Filmi - Ev"><img src="http://i2.imgiz.com/rshots/7775/sahibindencom-reklam-filmi-ev_7775249-7220_640x360.jpg" height="360" width="640" alt="Sahibinden.com Reklam Filmi - Ev"></a><p>sahibinden.com Reklam Filmi - Ev</p>  ]]></content:encoded>
+<dc:creator>sahibinden.com</dc:creator>
+<guid isPermaLink="true">http://www.izlesene.com/video/sahibindencom-reklam-filmi-ev/7775249</guid>
+<media:thumbnail url="http://i2.imgiz.com/rshots/7775/sahibindencom-reklam-filmi-ev_7775249-7220_640x360.jpg" width="640" height="360"  />
+<media:player url="http://www.izlesene.com/embedplayer/7775249" width="640" height="360"  />
+<pubDate>Tue, 23 Sep 2014 10:30:08 GMT</pubDate>
+<link>http://www.izlesene.com/video/sahibindencom-reklam-filmi-ev/7775249</link>
+</item>
+
+<item>
+<title><![CDATA[ Sahibinden.com Reklam Filmi - Araba  ]]></title>
+<description><![CDATA[ sahibinden.com Reklam Filmi - Araba  ]]></description>
+<content:encoded><![CDATA[ <a href="http://www.izlesene.com/video/sahibindencom-reklam-filmi-araba/7775184" target="_blank" title="Sahibinden.com Reklam Filmi - Araba"><img src="http://i1.imgiz.com/rshots/7775/sahibindencom-reklam-filmi-araba_7775184-8010_640x360.jpg" height="360" width="640" alt="Sahibinden.com Reklam Filmi - Araba"></a><p>sahibinden.com Reklam Filmi - Araba</p>  ]]></content:encoded>
+<dc:creator>sahibinden.com</dc:creator>
+<guid isPermaLink="true">http://www.izlesene.com/video/sahibindencom-reklam-filmi-araba/7775184</guid>
+<media:thumbnail url="http://i1.imgiz.com/rshots/7775/sahibindencom-reklam-filmi-araba_7775184-8010_640x360.jpg" width="640" height="360"  />
+<media:player url="http://www.izlesene.com/embedplayer/7775184" width="640" height="360"  />
+<pubDate>Tue, 23 Sep 2014 10:04:07 GMT</pubDate>
+<link>http://www.izlesene.com/video/sahibindencom-reklam-filmi-araba/7775184</link>
+</item>
+
+<item>
+<title><![CDATA[ sahibinden.com'da herkes için bir şey var  ]]></title>
+<description><![CDATA[ sahibinden.com'da herkes için bir şey var   ]]></description>
+<content:encoded><![CDATA[ <a href="http://www.izlesene.com/video/sahibindencomda-herkes-icin-bir-sey-var/2379995" target="_blank" title="sahibinden.com'da herkes için bir şey var"><img src="http://i4.imgiz.com/rshots/2379/sahibindencomda-herkes-icin-bir-sey-var_2379995-14_640x360.jpg" height="360" width="640" alt="sahibinden.com'da herkes için bir şey var"></a><p>sahibinden.com'da herkes için bir şey var </p>  ]]></content:encoded>
+<dc:creator>sahibinden.com</dc:creator>
+<guid isPermaLink="true">http://www.izlesene.com/video/sahibindencomda-herkes-icin-bir-sey-var/2379995</guid>
+<media:thumbnail url="http://i4.imgiz.com/rshots/2379/sahibindencomda-herkes-icin-bir-sey-var_2379995-14_640x360.jpg" width="640" height="360"  />
+<media:player url="http://www.izlesene.com/embedplayer/2379995" width="640" height="360"  />
+<pubDate>Tue, 20 Jul 2010 12:34:24 GMT</pubDate>
+<link>http://www.izlesene.com/video/sahibindencomda-herkes-icin-bir-sey-var/2379995</link>
+</item>
+
+</channel>
+</rss>

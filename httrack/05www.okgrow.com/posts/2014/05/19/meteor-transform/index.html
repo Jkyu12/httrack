@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from www.okgrow.com/posts/2014/05/19/meteor-transform/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Nov 2014 16:45:45 GMT -->
+<head>
+    <meta charset='utf-8' />
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport' />
+<title>Adding computed properties to Meteor data</title>
+<meta content='Add shared behavior and attributes to Meteor Collection document objects using the transform feature' name='description' />
+<meta content='Adding computed properties to Meteor data' property='og:title' />
+<meta content='Add shared behavior and attributes to Meteor Collection document objects using the transform feature' property='og:description' />
+<meta content='/images/okgrow-logo-text.jpg' property='og:image' />
+<meta content='OK GROW!' property='og:site_name' />
+<link href='../../../../../images/icons/favicon.png' rel='icon' type='image/png' />
+<link href='../../../../../images/icons/apple-touch-1.png' rel='apple-touch-icon-precomposed' />
+<link href='../../../../../images/icons/apple-touch-2.png' rel='apple-touch-icon-precomposed' sizes='72x72' />
+<link href='../../../../../images/icons/apple-touch-3.png' rel='apple-touch-icon-precomposed' sizes='114x114' />
+<link href='../../../../../images/icons/apple-touch-4.png' rel='apple-touch-icon-precomposed' sizes='144x144' />
+<script src='../../../../../../use.typekit.net/mnv1sgw.js' type='text/javascript'></script>
+<script type='text/javascript'>
+  //<![CDATA[
+    try{Typekit.load();}catch(e){}
+  //]]>
+</script>
+    <link href="../../../../../stylesheets/blog.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="../../../../../javascripts/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      
+        var log_tracking = false;
+        analytics.initialize({
+          'Google Analytics': {
+            trackingId: 'UA-28443514-1'
+          },
+          'Mixpanel': {
+            token: '611e1e0b5e2d3ad54663006ceb759b57',
+            identify: false,
+            people: true
+          },
+          'KISSmetrics': {
+            apiKey: 'a95f2214974d22d60b27eaecc294b77051eda9a0'
+          }
+        });
+      
+    </script>
+  </head>
+  <body class='posts posts_2014 posts_2014_05 posts_2014_05_19 posts_2014_05_19_meteor-transform posts_2014_05_19_meteor-transform_index'>
+    <div id='wrapper'>
+      <div id='main'>
+        <div class='navigation-bar'>
+          <div class='pull-right'>
+            <a alt='Return to OK GROW! main page' data-track='main homepage link on blog' href='../../../../../index.html'>
+              <div class='okgrow'></div>
+            </a>
+          </div>
+          <div class='pull-left show-desktop'>
+            You’re reading the
+            <a data-track="posts index link in header text" href="../../../../index.html">OK GROW! Blog</a>,
+            by the developers and designers at
+            <a data-track="header text homepage link on blog" href="../../../../../index.html">OK GROW!</a>.
+          </div>
+          <div class='pull-left show-tablet'>
+            You’re reading the
+            <a data-track="posts index link in header text" href="../../../../index.html">OK GROW! Blog</a>.
+          </div>
+          <div class='pull-left show-phone'>
+            <a data-track="posts index link in header text" href="../../../../index.html">OK GROW! Blog</a>
+          </div>
+        </div>
+        <div id='blog-logo'>
+          <a alt='Return to OK GROW! Blog' data-track='blog logo' href='../../../../index.html'>
+            <img src='../../../../../images/blog-logo.png' />
+          </a>
+        </div>
+        <div class='blog-container' data-track-seen='blog article'>
+  <div class='container heading'>
+    <div class='title'>
+      <h1>
+        Adding computed properties to Meteor data
+      </h1>
+    </div>
+    <div class='author'>
+      <h5>
+        By
+        Paul Dowman
+        -
+        <span>
+          May 19, 2014
+        </span>
+        <div class='pull-right'>
+          <a data-track="blog tag link" href="../../../../tags/meteor/index.html">Meteor</a>, <a data-track="blog tag link" href="../../../../tags/code/index.html">Code</a>
+        </div>
+      </h5>
+    </div>
+  </div>
+  <div class='container first'>
+    <div class='post'>
+      <p>Meteor has a very light-weight model layer compared to web frameworks like
+Rails. In fact, depending on your definition of what a model layer is, it might
+not have one at all. It stays very close to MongoDB, providing plain JavaScript
+object representations of your MongoDB documents.</p>
+
+<p>Often you&#39;ll want your Collection objects to have some behavior or computed
+properties. In our <a href="../../../../../meteor/learn/index.html">Meteor workshop</a> we build a
+team-based <a href="http://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro</a> timer app
+as an exercise, so we need a <code>Pomodoros</code> collection. We need to know how many
+minutes and seconds are left in a given Pomodoro, and whether it&#39;s finished or
+not, but we don&#39;t want to continually update attributes in the database like
+<code>completed</code> or <code>timeRemaining</code>. Those can be computed easily based on the start
+time.</p>
+
+<p>So we just store a <code>startDate</code> attribute which is a <code>Date</code> object (which
+represents a date and time down to the millisecond).</p>
+
+<p>We could have helpers that calculate time remaining and use a
+<a href="https://github.com/meteor/meteor/blob/master/packages/spacebars/README.md">Spacebars</a>
+tag like <code>{{timeRemaining this}}</code>. But object-oriented programming was invented
+for a reason - sometimes it&#39;s nice to actually have methods on your objects.</p>
+
+<h1>Change your Collection objects using &ldquo;transform&rdquo;</h1>
+
+<p>Meteor&#39;s <a href="http://docs.meteor.com/#meteor_collection"><code>Collection</code> constructor</a>
+can take an option called <code>transform</code>. You can specify a function that modifies
+the objects which are returned:</p>
+
+<blockquote>
+<p><strong>transform</strong> Function</p>
+
+<p>An optional transformation function. Documents will be passed through this
+function before being returned from fetch or findOne, and before being passed to
+callbacks of observe, map, forEach, allow, and deny. Transforms are not applied
+for the callbacks of observeChanges or to cursors returned from publish
+functions.</p>
+</blockquote>
+
+<p>Let&#39;s add <code>endDate()</code> and <code>remaining()</code> functions that return values calculated
+from the <code>startDate</code> attribute. Here&#39;s the simplest way:</p>
+
+<div class='code-block'>
+  <a href="transform.js" download="transform.js" class="download-link">transform.js</a>
+  <div class='rendered-code'>
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span class="nx">Pomodoros</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Meteor</span><span class="p">.</span><span class="nx">Collection</span><span class="p">(</span><span class="s2">&quot;Pomodoros&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">transform</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">doc</span><span class="p">.</span><span class="nx">endDate</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// SugarJS gives us minutesAfter() which gives us a nice syntax for</span>
+      <span class="c1">// creating new Date objects</span>
+      <span class="c1">// http://sugarjs.com/api/Number/unitAfter</span>
+      <span class="k">return</span> <span class="p">((</span><span class="mi">25</span><span class="p">).</span><span class="nx">minutesAfter</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">startDate</span><span class="p">));</span>
+    <span class="p">};</span>
+    <span class="nx">doc</span><span class="p">.</span><span class="nx">remaining</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">endDate</span><span class="p">().</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+    <span class="p">};</span>
+    <span class="k">return</span> <span class="nx">doc</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table>
+  </div>
+</div>
+
+<p><img src="transform-screenshot.png"/></p>
+
+<h1>Give your Collection objects shared methods using a prototype</h1>
+
+<p>JavaScript&#39;s method of sharing code between objects is to use an object
+prototype. (If you&#39;re used to class-based OO languages like Java, Ruby or Python
+and aren&#39;t sure how JS is different then read about the difference
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">here</a>).</p>
+
+<p>So rather than defining a new function on every object, let&#39;s give our Pomodoro
+objects a prototype with our <code>endDate()</code> and <code>remaining()</code> functions:</p>
+
+<div class='code-block'>
+  <a href="transform_with_prototype.js" download="transform_with_prototype.js" class="download-link">transform_with_prototype.js</a>
+  <div class='rendered-code'>
+    <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span class="c1">// create an object with the desired methods to use as prototype</span>
+<span class="kd">var</span> <span class="nx">pomodoro</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">endDate</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// SugarJS gives us minutesAfter() which gives us a nice syntax for</span>
+    <span class="c1">// creating new Date objects</span>
+    <span class="c1">// http://sugarjs.com/api/Number/unitAfter</span>
+    <span class="k">return</span> <span class="p">((</span><span class="mi">25</span><span class="p">).</span><span class="nx">minutesAfter</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">startDate</span><span class="p">));</span>
+  <span class="p">},</span>
+  <span class="nx">remaining</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">endDate</span><span class="p">().</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">Pomodoros</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Meteor</span><span class="p">.</span><span class="nx">Collection</span><span class="p">(</span><span class="s2">&quot;Pomodoros&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">transform</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">doc</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// create a new empty object with pomodoro as it&#39;s prototype</span>
+    <span class="kd">var</span> <span class="nx">newInstance</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">pomodoro</span><span class="p">);</span>
+
+    <span class="c1">// copy the data from doc to newInstance and return newInstance</span>
+    <span class="k">return</span>  <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">newInstance</span><span class="p">,</span> <span class="nx">doc</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table>
+  </div>
+</div>
+
+<p>Here we define an object to use as the prototype (lines 1-12). It has two
+functions, <code>endDate()</code> and <code>remaining()</code>.</p>
+
+<p>Our transform function creates a new empty object using our object as the
+prototype (using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a>).</p>
+
+<p>It then copies the data fields from <code>doc</code> to it (<code>doc</code> is our object that was
+retrieved from the Collection).</p>
+
+<p>So we return a new object with our custom prototype that has the data fields
+from object that was retrieved from our Collection added to it.</p>
+
+<p><img src="transform-with-prototype-screenshot.png"/></p>
+
+<p>Whichever technique we use, the result is that all objects returned by queries
+on our Collections end up with our custom methods added to them to provide
+computed properties.</p>
+    </div>
+    <div class='colophon-hr'>
+      <div class='colophon'></div>
+    </div>
+    <div class='author-container'>
+      <h5 class='about-author'>About the Author</h5>
+      <div class='paul'></div>
+      <div class='bio'>
+        <strong>Founder, Developer</strong>
+        Paul has been developing web apps since 1995, using JavaScript since it was
+        first released, and Ruby since 2007. He has been managing software projects
+        for much of this time using Agile practices, and is a believer in Lean
+        startup principles. He is experienced with large-scale application
+        architecture as well as with web app performance and scaling.
+      </div>
+      <a class='link' href='https://plus.google.com/+PaulDowman?rel=author'>Google</a>
+    </div>
+  </div>
+  <div class='blog-newsletter'>
+    <div class='container'>
+      <div class='call-to-action section'>
+        <div class='row'>
+          <div class='call'>
+            <span>We'll share what we've learned, get tips and info in your inbox occasionally</span>
+            <form class='okgrow-form newsletter' data-track="Newsletter signup on 'Adding computed properties to Meteor data' post">
+              <fieldset>
+                <div class='inline-group'>
+                  <input name='mailing_list' type='hidden' value='yes' />
+                  <input name='comment' type='text' />
+                  <input name='email' placeholder='name@email.com' required='yes' type='email' />
+                  <input type='submit' value='Sign Up' />
+                </div>
+              </fieldset>
+            </form>
+            <div class='form-submitted'>
+              <img class='heart' src='../../../../../images/white-heart.png' />
+              Thanks for signing up, and please do give us some feedback!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+    <div class='container'>
+      <div class='comments' data-track-seen='blog comments'>
+        <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              var disqus_shortname = 'okgrow';
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </hr>
+</div>
+      </div>
+    </div>
+    <footer data-track-seen='posts footer'>
+      <div class='blog-container'>
+        <hr />
+        <div class='container'>
+          <ul class='nav nav-pills'>
+            <li>
+              <a data-track='twitter link in blog footer' href='http://twitter.com/ok_grow'>Twitter</a>
+            </li>
+            <li>
+              <a data-track='facebook link in blog footer' href='http://facebook.com/okgrow'>Facebook</a>
+            </li>
+            <li>
+              <a data-track='google+ link in blog footer' href='https://plus.google.com/+Okgrow?rel=author'>Google+</a>
+            </li>
+            <li>
+              <a data-track='github link in blog footer' href='http://github.com/okgrow'>GitHub</a>
+            </li>
+          </ul>
+          <div class='copyright'>
+            All text and design is copyright © OK GROW! 2014. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var disqus_shortname = 'okgrow';
+        
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+      //]]>
+    </script>
+  </body>
+
+<!-- Mirrored from www.okgrow.com/posts/2014/05/19/meteor-transform/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 01 Nov 2014 16:46:04 GMT -->
+</html>
+

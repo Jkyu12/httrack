@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<title>İzlesene / Dede Korkut Hikayeleri - Son Yüklenenler</title>
+<description>Dede Korkut Hikayeleri İzlesene kanalındaki videolar.</description>
+<link>http://www.izlesene.com/dedekorkuthikayeleri</link>
+<language>tr-tr</language>
+<image>
+<title>İzlesene / Dede Korkut Hikayeleri - Son Yüklenenler</title>
+<link>http://www.izlesene.com/dedekorkuthikayeleri</link>
+<url>http://i9.imgiz.com/talent/images/326885_1397551137_avatar_cropped.jpeg</url>
+<width>130</width>
+<height>130</height>
+</image>
+<atom:link href="http://www.izlesene.com/dedekorkuthikayeleri/rss/latest" rel="self" type="application/rss+xml" />
+<item>
+<title><![CDATA[ Dede Korkut Hikayeleri Bölüm 1  ]]></title>
+<description><![CDATA[ Tarih boyunca dilden dile, nesilden nesile aktarılan bir sözlü gelenek! En ünlü Türk destanlarından en güzeli! Her şeyin en başına dönmeye hazır mısınız? Zamanı aşan öyküler, ilham verici karakterler bu çizgi dizide..  ]]></description>
+<content:encoded><![CDATA[ <a href="http://www.izlesene.com/video/dede-korkut-hikayeleri-bolum-1/5564865" target="_blank" title="Dede Korkut Hikayeleri Bölüm 1"><img src="http://i2.imgiz.com/rshots/5564/dede-korkut-hikayeleri-bolum-1_5564865-234_640x360.jpg" height="360" width="640" alt="Dede Korkut Hikayeleri Bölüm 1"></a><p>Tarih boyunca dilden dile, nesilden nesile aktarılan bir sözlü gelenek! En ünlü Türk destanlarından en güzeli! Her şeyin en başına dönmeye hazır mısınız? Zamanı aşan öyküler, ilham verici karakterler bu çizgi dizide..</p>  ]]></content:encoded>
+<dc:creator>Dede Korkut Hikayeleri</dc:creator>
+<guid isPermaLink="true">http://www.izlesene.com/video/dede-korkut-hikayeleri-bolum-1/5564865</guid>
+<media:thumbnail url="http://i2.imgiz.com/rshots/5564/dede-korkut-hikayeleri-bolum-1_5564865-234_640x360.jpg" width="640" height="360"  />
+<media:player url="http://www.izlesene.com/embedplayer/5564865" width="640" height="360"  />
+<pubDate>Wed, 01 Feb 2012 11:21:39 GMT</pubDate>
+<link>http://www.izlesene.com/video/dede-korkut-hikayeleri-bolum-1/5564865</link>
+</item>
+
+</channel>
+</rss>
