@@ -1,0 +1,653 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wr",
+				"writeLog"
+			],
+			[
+				"lis",
+				"listNumber"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"arr",
+				"arraySrc"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"get_class",
+				"get_class_methods"
+			],
+			[
+				"string",
+				"stringHtml"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"PAC",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Add Repository"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/sites/httrack/httrack/03www.unify-v1.com/index.html",
+		"/var/www/www.subingleslyrics.com/assets/css/plugins.css",
+		"/var/www/www.subingleslyrics.com/assets/css/themes/blue.css",
+		"/var/www/www.subingleslyrics.com/assets/css/themes/default.css",
+		"/home/anb/sites/httrack/httrack/03www.unify-v1.com/assets/js/pages/index.js",
+		"/home/anb/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/var/www/sites/colombia/mediastart/application/core/MY_Controller.php",
+		"/var/www/sites/colombia/mediastart/application/controllers/page.php",
+		"/var/www/sites/colombia/mediastart/application/libraries/Layout.php",
+		"/var/www/www.subingleslyrics.com/application/modules/addons/config/addons.php",
+		"/var/www/www.subingleslyrics.com/application/modules/addons/config/addon_bs_form_helpers.php",
+		"/var/www/www.subingleslyrics.com/application/modules/addons/data/bs_form_helpers/MY_form_helper.php",
+		"/var/www/www.subingleslyrics.com/application/core/MY_ControllerCustomFront.php",
+		"/var/www/www.subingleslyrics.com/application/third_party/MX/Modules.php",
+		"/var/www/www.subingleslyrics.com/application/config/autoload.php",
+		"/var/www/www.subingleslyrics.com/application/config/assets.php",
+		"/var/www/www.subingleslyrics.com/application/modules/video/views/index.php",
+		"/var/www/www.subingleslyrics.com/application/modules/video/controllers/video.php",
+		"/var/www/www.subingleslyrics.com/application/modules/skeleton/controllers/skeleton.php",
+		"/var/www/www.subingleslyrics.com/application/modules/addons/config/addon_jquery_file_upload.php",
+		"/var/www/www.subingleslyrics.com/bootstrap.php",
+		"/var/www/www.subingleslyrics.com/.gitignore",
+		"/var/www/www.subingleslyrics.com/log.log",
+		"/var/www/www.subingleslyrics.com.x/composer.json",
+		"/var/www/www.subingleslyrics.com/composer.json",
+		"/var/www/www.subingleslyrics.com.x/composer.lock",
+		"/var/www/www.subingleslyrics.com/vendor/composer/autoload_namespaces.php",
+		"/var/www/www.subingleslyrics.com/vendor/autoload.php",
+		"/var/www/www.subingleslyrics.com/vendor/composer/ClassLoader.php",
+		"/var/www/www.subingleslyrics.com/vendor/composer/autoload_psr4.php",
+		"/var/www/www.subingleslyrics.com/index.php",
+		"/var/www/www.subingleslyrics.com.x/bootstrap.php",
+		"/var/www/www.subingleslyrics.com/vendor/composer/autoload_real.php",
+		"/var/www/www.subingleslyrics.com/license.txt",
+		"/var/www/www.subingleslyrics.com/application/views/header.php",
+		"/var/www/www.subingleslyrics.com/application/modules/skeleton/views/pagelet_sidebar.php",
+		"/var/www/www.subingleslyrics.com/application/libraries/Template.php",
+		"/var/www/www.subingleslyrics.com/application/modules/skeleton/views/index.php",
+		"/var/www/www.subingleslyrics.com/README.md",
+		"/var/www/www.subingleslyrics.com/application/modules/skeleton/skeleton.json",
+		"/var/www/www.subingleslyrics.com/application/config/config.php",
+		"/var/www/www.subingleslyrics.com/application/config/routes.php",
+		"/var/www/www.subingleslyrics.com/application/controllers/index.php",
+		"/var/www/www.subingleslyrics.com/application/controllers/welcome.php",
+		"/var/www/www.subingleslyrics.com/.gitattributes",
+		"/home/anb/sites/httrack/httrack/www.izlesene.com/index.html",
+		"/var/www/www.subingleslyrics.com/package.json",
+		"/var/www/www.subingleslyrics.com/Gruntfile.js",
+		"/home/anb/Descargas/avidemux_2.6.8/bootStrapCrossMac106.sh",
+		"/var/www/www.subingleslyrics.com/boostrap.php",
+		"/home/anb/sites/devTool/ide/vim.sh",
+		"/var/www/www.subingleslyrics.com/file.php",
+		"/var/www/www.subingleslyrics.com/file.txt",
+		"/var/www/www.subingleslyrics.com/hi.hi",
+		"/home/anb/sites/www.subingleslyrics.com/package.json",
+		"/home/anb/sites/www.subingleslyrics.com/include.autoload.php",
+		"/home/anb/sites/www.subingleslyrics.com/index.php",
+		"/home/anb/log.log",
+		"/home/anb/sites/www.subingleslyrics.com/composer.json",
+		"/home/anb/sites/www.subingleslyrics.com/log.log",
+		"/home/anb/sites/www.subingleslyrics.com/vendor/composer/ClassLoader.php",
+		"/home/anb/sites/www.subingleslyrics.com/vendor/composer/autoload_real.php",
+		"/home/anb/sites/www.subingleslyrics.com/vendor/composer/autoload_namespaces.php",
+		"/home/anb/sites/www.subingleslyrics.com/vendor/composer/autoload_psr4.php",
+		"/home/anb/sites/www.subingleslyrics.com/vendor/composer/autoload_classmap.php",
+		"/home/anb/sites/chamilo-lms/vendor/composer/autoload_classmap.php",
+		"/home/anb/sites/composer/composer.json",
+		"/home/anb/sites/www.subingleslyrics.com/vendor/autoload.php",
+		"/home/anb/sites/www.subingleslyrics.com/codeigniter-skeleton-composer/README.md",
+		"/home/anb/sites/composer/vendor/monolog/monolog/README.mdown",
+		"/home/anb/sites/scrap/05.con.mysql.py",
+		"/home/anb/sites/devTool/ianibal/subingleslyrics.com.sh",
+		"/home/anb/sites/devTool/developer/mysql.sh",
+		"/home/anb/sites/devTool/markdown.sh",
+		"/home/anb/test_markdow.md",
+		"/media/anb/ACD1-72F9/USB/link.php",
+		"/home/anb/sites/scrapython/form.html",
+		"/home/anb/sites/scrapython/06.subingles.py",
+		"/home/anb/sites/httrack/httrack/index.html",
+		"/home/anb/sites/httrack/httrack/soliloquywp.com/index.html",
+		"/home/anb/sites/scrapython/06.subingles.log",
+		"/home/anb/sites/scrapython/05.con.mysql.py",
+		"/home/anb/sites/scrap/mysql.py",
+		"/home/anb/sites/scrap/scrape.py",
+		"/home/anb/sites/scrap/idYoutube.py",
+		"/home/anb/sites/scrap/subingles.py",
+		"/home/anb/sites/subingleslyrics.com/03.html",
+		"/w/Accesos.txt",
+		"/home/anb/sites/google.api/youtube/get.html",
+		"/home/anb/.cache/.fr-3PWatr/video/video.php",
+		"/home/anb/.cache/.fr-fbgKsK/video/recursos/CrearReproductor.php",
+		"/home/anb/sites/subingleslyrics.com/02.html",
+		"/home/anb/sites/httrack/index.html",
+		"/home/anb/sites/subingleslyrics.com/01.html",
+		"/home/anb/sites/subingleslyrics.com/index.html",
+		"/home/anb/.cache/.fr-fde8pY/mybanco/controller/controller.php",
+		"/home/anb/sites/httrack/httrack/www.dirpy.com/js/bootstrap.js",
+		"/home/anb/sites/httrack/httrack/www.dirpy.com/js/bootstrap-timepicker.min.js",
+		"/home/anb/sites/scrap/scrape_01.py",
+		"/home/anb/sites/test/php/hashids.php/lib/Hashids/Hashids.php",
+		"/home/anb/sites/test/php/hashids.php/examples/encoding_decoding_several_numbers.php",
+		"/home/anb/sites/scrap/scrape_02.py",
+		"/home/anb/sites/scrap/scrape_01.html",
+		"/home/anb/sites/scrap/scrape.html",
+		"/home/anb/sites/devTool/php.txt",
+		"/home/anb/sites/devTool/python.sh",
+		"/media/anb/ACD1-72F9/VIDE02BRAIN.Backbone.js.21.08.2014/backbone/leeme.txt",
+		"/home/anb/sites/wordpress/wp-content/plugins/buddypress/readme.txt",
+		"/home/anb/sites/devTool/ianibal/english.txt",
+		"/home/anb/Escritorio/New/Katy Perry - Unconditionally (Official)-XjwZAa2EjKA.srt",
+		"/var/tmp/kdecache-anb/krun/27001_0_0.9.6",
+		"/home/anb/sites/colombia/mediastart/doc/db/Dump20140615.sql",
+		"/home/anb/sites/colombia/mediastart/application/config/database.php",
+		"/home/anb/.wine/dosdevices/c:/My Web Sites/wine/photoshopactionscripts.com/index.html",
+		"/home/anb/.cache/.fr-jd6ss5/Peppa.Pig. S01E01 - Muddy Puddles (Issue).txt",
+		"/home/anb/.cache/.fr-TJlml4/peppa.pig.muddy.puddles.(5246503).nfo",
+		"/home/anb/sites/devTool/debian/ubuntu.sh",
+		"/home/anb/Applications/corebird-master/README.md",
+		"/home/anb/Applications/httrack-3.48.19/README",
+		"/home/anb/Applications/httrack-3.48.19/INSTALL",
+		"/media/anb/ACD1-72F9/Full House Season 1 Complete DVD Rip By Dark_Stalker/Full House Season 1 Complete DVD Rip By Dark_Stalker.sfv",
+		"/home/anb/Escritorio/unconditinally.ass",
+		"/home/anb/Escritorio/unconditinally.srt",
+		"/media/anb/ACD1-72F9/Godzilla (2014)/Godzilla.2014.720p.BluRay.x264.YIFY_ES.srt",
+		"/media/anb/ACD1-72F9/Linux Format UK - Best Distro 2014 (November 2014)/~Download More Stuff Here !.url",
+		"/media/anb/ACD1-72F9/Linux Format UK - Best Distro 2014 (November 2014)/~Get More Cool Apps to Read Ebooks and Mags!.url",
+		"/media/anb/ACD1-72F9/Linux Format UK - Best Distro 2014 (November 2014)/^ Just one Click to Get More Software Tips and Stuffs.url",
+		"/media/anb/ACD1-72F9/Linux Format UK - Best Distro 2014 (November 2014)/~Get Your Files Here/_PLEASE SUPPORT_/_Read MORE!_.txt"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"*.php",
+			"/var/www/www.subingleslyrics.com/application/modules",
+			"*.php",
+			"*.*",
+			"*.py",
+			"*.*",
+			"*.php",
+			"*.*",
+			"*.php",
+			"",
+			"*.js",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ci->load->view",
+			"Skeleton",
+			"CodeIgniter Skeleton",
+			"assets_url",
+			"Todo",
+			"module_name",
+			"locations",
+			"APPPATH.'modules/'",
+			"modules_locations",
+			"addons",
+			"todo",
+			"module",
+			"addons",
+			"module",
+			"skeleton/views/index.php",
+			"skeleton/controllers/skeleton.php",
+			"vendor/autoload.php",
+			"autoload.php",
+			"8a54",
+			"main8a54",
+			"8a54",
+			"boostra",
+			"ajax",
+			"js",
+			"SQL",
+			"sql",
+			"SQL",
+			"sql",
+			"cursor",
+			"dict",
+			"idweb",
+			"IDWEB",
+			"getDataWeb",
+			"idImage",
+			"ARTIST",
+			"artist",
+			"http://www.readingbear.org/",
+			"<",
+			";<br>                    ",
+			"<br>",
+			"Gc2en3nHxA4",
+			"testAPI",
+			"statusChangeCallback",
+			"getLoginStatus",
+			"statusChangeCallback",
+			"download",
+			"page",
+			"Pa",
+			"video",
+			"core160",
+			"core",
+			"_atr",
+			"static/r07/core160.js",
+			"_atc",
+			"_duc",
+			"_euc",
+			"8a54",
+			"main8a54",
+			"8a54",
+			"bootstrap.min",
+			"tar",
+			"Around",
+			"scrot",
+			"uname",
+			"App",
+			"timezone",
+			"php",
+			"dir_name",
+			"error_reporting",
+			"find",
+			"php",
+			"apache",
+			"get_url",
+			"api_get_",
+			"function api_get_path",
+			"api_get_path",
+			"$link_shared",
+			"chamiloutp",
+			"clean",
+			"erick",
+			"dump",
+			"erick",
+			"eric",
+			"erick",
+			"loopSkypeParam",
+			"Estafador...! ALBERTO larguese de mi cuenta",
+			"paramMessage",
+			"Attach",
+			"UserName",
+			"FullName",
+			"def FullName",
+			"skype",
+			"hello.init",
+			"id",
+			"facebook",
+			"dbHostForm",
+			"6",
+			"FUNCTION display_requirements",
+			"function check_writable",
+			"function check_php_setting",
+			"function display_requirements",
+			"function display_requirements ",
+			"function check_extension",
+			"function get_php_setting",
+			"function check_php_setting",
+			"function display_requirements",
+			"function check_extension",
+			"function display_requirements",
+			"function check_extension",
+			"function display_requirements",
+			"running",
+			"display_license_agreement",
+			"table",
+			"SYSTEM_MAIN_DATABASE_FILE",
+			"Database",
+			"IncorrectPhpVersionDescription",
+			"function api_check_php_version",
+			"global_error_message_page",
+			"global_error_message",
+			"read_installation_guide",
+			"InstallationDescription",
+			"INSTALL Chamilo",
+			"POWERED_BY",
+			"global_error_code",
+			"checkout",
+			"sublime",
+			"diff",
+			"soft"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"my_form_helper",
+				"application/modules/addons/data/bs_form_helpers/MY_form_helper.php"
+			],
+			[
+				"bs_form_helpers",
+				"application/modules/addons/config/addon_bs_form_helpers.php"
+			],
+			[
+				"my_controller",
+				"application/core/MY_Controller.php"
+			],
+			[
+				"autoload",
+				"application/config/autoload.php"
+			],
+			[
+				"modules/addons/config/addons.php",
+				"application/modules/addons/config/addons.php"
+			],
+			[
+				"modules",
+				"application/third_party/MX/Modules.php"
+			],
+			[
+				"modules/skeleton/skeleton.json",
+				"application/modules/skeleton/skeleton.json"
+			],
+			[
+				"vim",
+				"devTool/ide/vim.sh"
+			],
+			[
+				"mysql",
+				"developer/mysql.sh"
+			],
+			[
+				"php",
+				"php.txt"
+			],
+			[
+				"engl",
+				"ianibal/english.txt"
+			],
+			[
+				"lubuntu",
+				"debian/lubuntu.sh"
+			],
+			[
+				"git",
+				"ide/git.sh"
+			],
+			[
+				"urlmanager",
+				"main/inc/lib/urlmanager.lib.php"
+			],
+			[
+				"config.py",
+				"config.py"
+			],
+			[
+				"skype",
+				"Skype4Py/skype.py"
+			],
+			[
+				"skype4py",
+				"unittests/skype4pytest.py"
+			],
+			[
+				"src/modules/facebook.js",
+				"src/modules/facebook.js"
+			],
+			[
+				"trad4all.inc.php",
+				"main/lang/arabic/trad4all.inc.php"
+			],
+			[
+				"i_database.class.php",
+				"main/install/i_database.class.php"
+			],
+			[
+				"install.class.php",
+				"main/install/install.class.php"
+			],
+			[
+				"db_main.sq",
+				"main/install/db_main.sql"
+			],
+			[
+				"install.lib.php",
+				"main/install/install.lib.php"
+			],
+			[
+				"log.class.ph",
+				"main/inc/lib/log.class.php"
+			],
+			[
+				"database.lib.php",
+				"main/inc/lib/database.lib.php"
+			],
+			[
+				"lib/autoload.class.php",
+				"main/inc/lib/autoload.class.php"
+			],
+			[
+				"main/inc/autoload.inc.php",
+				"main/inc/autoload.inc.php"
+			],
+			[
+				"global_error_message.inc.php",
+				"main/inc/global_error_message.inc.php"
+			],
+			[
+				"main/install/index.php",
+				"main/install/index.php"
+			],
+			[
+				"inc/lib/main_api.lib.php",
+				"main/inc/lib/main_api.lib.php"
+			],
+			[
+				"conf/configuration.php",
+				"main/inc/conf/configuration.php"
+			],
+			[
+				"main/inc/global.inc.php",
+				"main/inc/global.inc.php"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
+				"linux",
+				"debian/linux.sh"
+			],
+			[
+				"git.sh",
+				"ide/git.gist.sh"
+			],
+			[
+				"node",
+				"developer/node.sh"
+			],
+			[
+				"configura",
+				"main/inc/conf/configuration.php"
+			],
+			[
+				"vendor/class/mypdo.php",
+				"vendor/class/MyPdo.php"
+			],
+			[
+				"gi",
+				"ide/git.txt"
+			],
+			[
+				"ide/vim.sh",
+				"ide/vim.sh"
+			],
+			[
+				"developer/mysql.sh",
+				"developer/mysql.sh"
+			],
+			[
+				"vi",
+				"ide/vim.sh"
+			],
+			[
+				"coursecopy/create_backup.php",
+				"main/coursecopy/create_backup.php"
+			],
+			[
+				"main/course_home/course_home.php",
+				"main/course_home/course_home.php"
+			],
+			[
+				"courses/curso1/",
+				"courses/CURSO1/index.php"
+			],
+			[
+				"main/coursecopy/import_backup.php",
+				"main/coursecopy/import_backup.php"
+			],
+			[
+				"apache",
+				"developer/apache.txt"
+			],
+			[
+				"database.constants.inc.php",
+				"main/inc/lib/database.constants.inc.php"
+			],
+			[
+				"global.inc.php",
+				"main/inc/global.inc.php"
+			],
+			[
+				"main/inc/ajax/document.ajax.php",
+				"main/inc/ajax/document.ajax.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/var/www/sites/httrack/httrack/03www.unify-v1.com/unify.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 260.0,
+	"status_bar_visible": true
+}
