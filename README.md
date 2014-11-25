@@ -1,20 +1,14 @@
 # httrack
 
-the Colleccion, web with tecnologies :
-- boostrap, responsivo, beauty design
+the Colleccion, web with tecnologies : bootstrap, responsive, beauty design.
+crawl, scrap methods
 
-* [link 1](#)
-
-* [link 2](#)
-
-* [link 3](#)
-
-* [link 4](www.soliloquywp.com)
-
-* [link 5](www.okgrow.com)
-
-* [link 6](www.izlesene.com)
-
-* [link 7](livedemo00.template-help.com/wt_51873/index.html)
+* [source 01](#)
+* [source 02](#)
+* [source 03](#)
+* [source 04](www.soliloquywp.com)
+* [source 05](www.okgrow.com)
+* [source 06](www.izlesene.com)
+* [source 07](livedemo00.template-help.com/wt_51873/index.html)
 
 
