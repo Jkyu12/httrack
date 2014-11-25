@@ -3,16 +3,18 @@
 the Colleccion, web with tecnologies :
 - boostrap, responsivo, beauty design
 
-* [link1](#)
+* [link 1](#)
 
-* [link2](#)
+* [link 2](#)
 
-* [link3](#)
+* [link 3](#)
 
-* [link4](#)
+* [link 4](www.soliloquywp.com)
 
-* [link5](#)
+* [link 5](www.okgrow.com)
 
-* [link6](livedemo00.template-help.com/wt_51873/index.html)
+* [link 6](www.izlesene.com)
+
+* [link 7](livedemo00.template-help.com/wt_51873/index.html)
 
 
